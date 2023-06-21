@@ -36,7 +36,7 @@ def tcav_score(model, data_loader, cav, layer_name, class_list, concept):
 
     score = np.zeros(len(class_list))
     for i, k in enumerate(class_list):
-        score[i] = np.array(derivatives[k]).astype(np.int).sum(axis=0) / len(derivatives[k])
+        score[i] = np.array(derivatives[k]).astype(int).sum(axis=0) / len(derivatives[k])
     return score
 
 
